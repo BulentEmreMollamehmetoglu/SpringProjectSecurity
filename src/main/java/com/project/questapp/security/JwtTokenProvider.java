@@ -58,7 +58,7 @@ public class JwtTokenProvider {
     private boolean isTokenExpired(String token) {
         Date expiration = Jwts.parser().setSigningKey(APP_SECRET).parseClaimsJws(token).getBody().getExpiration();
         return expiration.before(new Date());
-        // it's just like named if expiration before than the new Date so that means is expirated.
+        // it's just like named if expiration before than the new Date so that means is expired.
     }
 
 
